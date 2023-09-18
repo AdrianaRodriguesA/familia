@@ -1,0 +1,176 @@
+* {
+    margin: 0%;
+}
+body {
+    font-family: helvetica;
+    background-color: rgb(200, 250, 200);
+    background-size: cover;
+    text-shadow: 1px 1px 0 #30382d;
+    color: rgb(237, 219, 156);
+}
+#container {
+    width: 99,99%;
+}
+header .container img {
+    width: 10%;
+    margin: 0 10px;
+}
+.logo, .slogan {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    padding: 5px 15px;
+    margin: 0px 60px;
+}
+.centro {
+    text-align: center;
+}
+header .container {
+    display: flex; 
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    background-color: rgb(237, 219, 156);
+    color: rgb(34, 138, 34);
+    top: 0
+}
+.container p {
+    font-size: 35px;
+}
+h1 {
+    font-size: 35px;
+}
+h2, h3 {
+    font-size: 22px;
+}
+h4 {
+    font-size: 18px;
+}
+hr {
+    width: 50%;
+    margin-left: 25%; 
+    block-size: 2px;
+    background-color: rgb(237, 219, 156);
+    border-radius: 5px;
+}
+.objetivo {
+    margin-left: 20%;
+    margin-right: 30%;
+    margin-top: 8%;
+    background-color: rgb(34, 138, 34);
+    text-shadow: 2px 2px 0 #30382d;
+    padding: 40px 30px;
+    text-align: center;
+}
+footer {
+    width: 100%;
+    background-color: rgb(238, 217, 148);
+    color: rgb(34, 138, 34);
+}
+#link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+footer h5{
+    font-size: 16px;
+    padding: 3px 10px;
+}
+footer span h6 {
+    text-align: center;
+    background-color: rgb(112, 109, 110);
+    color: rgb(252, 245, 247);
+    font-weight: 100;
+    font-size: 16px;
+}
+
+/* inicio responsivo */
+@media all and (max-width: 768px) {
+    header .logo img {
+        width: 20%;
+    }
+    .logo, .slogan {
+        margin: 0px 30px;
+    }
+    .container p{
+        font-size: 25px;
+     }
+    .objetivo{
+        margin-left: 20%;
+        margin-right: 20%;
+        padding: 40px 10px 10px 10px;
+    }
+    h1{
+        font-size: 30px;
+    }
+    footer h5{
+        font-size: 10px;
+    }
+    footer span h6 {
+        font-size: 10px;
+    }
+}
+@media all and (max-width: 500px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    header .container img {
+        display: none;
+    }
+    .container p{
+        font-size: 20px;
+    } 
+    .logo, .slogan {
+        margin: 0px 20px;
+    }
+     h1{
+        font-size: 25px;
+    }
+    h2, h3 {
+        font-size: 18px;
+    }
+    h4 {
+        font-size: 12px;
+    }
+     footer h5{
+        font-size: 8px;
+    }
+    footer span h6 {
+        font-size: 8px;
+    } 
+}
+@media all and (max-width: 450px) {
+    .container p {
+        font-size: 15px;
+    }
+    .objetivo {
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+    h1{
+        font-size: 20px;
+    }
+    #link {
+        display: none;
+    }
+}
+@media all and (max-width: 250px) {
+    .logo, .slogan {
+        padding: 0;
+    }
+    .container p{
+        font-size: 15px;
+    } 
+    h1{
+        font-size: 15px;
+    }
+    h2, h3 {
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 10px;
+    }
+}

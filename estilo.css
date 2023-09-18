@@ -1,0 +1,452 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    height: 100%;
+    width: 98vw;
+    max-width: 100vw;
+    background: linear-gradient(90deg, rgb(137, 245, 134) 1%, rgb(234, 240, 179) 99%) no-repeat;
+    background-size: cover;
+    font-family: helvetica;
+    color: rgb(13, 57, 13);
+    text-shadow: 1.5px 1.5px 0 rgb(119, 158, 93);
+}
+/* cabeçalho */
+.logo {
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
+    margin-right: 90px;
+    padding: 5px 10px;
+    font-size: 40px;
+}
+header .container {
+    display: flex; 
+    width: 98vw;
+    font-size: large;
+    top: 0;
+    background-color: rgb(234, 240, 179, 0.5);
+}
+header nav {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 90vw;
+    margin-left: 40vh;
+    padding: 0;
+}
+header a {
+    text-decoration: none;
+    color: rgb(13, 57, 13);
+    font-weight: bold;
+    margin: 0% 7%; 
+}
+header a:hover {
+    background-color: rgb(27, 98, 27, 0.3);
+    color: rgb(245, 245, 220);
+    border-radius: 15px;
+}
+/* tela de rolamento menu */
+#content {
+    height: 500px;
+}
+.content {
+    height: 440px;
+    width: 865px;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   /* define o tamanho da caixa de rolamento horizontal das imagens */
+}
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    display: flex;
+}
+.bar {
+    width: 70px;
+    height: 17px;
+    border: 2px solid rgb(255, 255, 255);
+    margin: 6px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .4s;
+    background-color: rgb(216, 237, 230);
+    font-size: 13px;
+    text-align: center;
+}
+.bar:hover {
+    background: rgba(255, 255, 255, 0.298);
+}
+input {
+    display: none;
+}
+/* para esconder as bolinhas do input */
+.slides {
+    display: flex;
+    width: 1000%;
+    height: 100%;
+    /* width é a quantidade total de imagens, sendo 100% cada uma. */
+}
+.slide {
+    width: 10.00%;
+    transition: .6s;
+   /* width 100% é o content inteiro então dividir pela quantidade de imagem */
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+#slide1:checked ~ .s1 {
+    margin-left: 0;
+}
+/* calcular margin-left dividindo a quantidade de imagem por 100 */
+#slide2:checked ~ .s2 {
+    margin-left: -10.00%;
+}
+#slide3:checked ~ .s3 {
+    margin-left: -20.00%;
+}
+#slide4:checked ~ .s4 {
+    margin-left: -30.00%;
+}
+#slide5:checked ~ .s5 {
+    margin-left: -40.00%;
+}
+#slide6:checked ~ .s6 {
+    margin-left: -50.00%;
+}
+#slide7:checked ~ .s7 {
+    margin-left: -60.00%;
+}
+#slide8:checked ~ .s8 {
+    margin-left: -70.00%;
+}
+#slide9:checked ~ .s9 {
+    margin-left: -80.00%;
+}
+#slide10:checked ~ .s10 {
+    margin-left: -90.00%;
+}
+/* vídeo, imagem */
+hr {
+    width: 50%;
+    margin-left: 20%; 
+    block-size: 5px;
+    background-color: rgb(216, 237, 230);
+    border-radius: 5px;
+}
+#titulo {
+    width: 98vw;
+    overflow: hidden;
+    padding: 30px 0 20px 0;
+}
+.coluna {
+    float: left;
+    position: relative;
+    width: 45%;
+    margin-left: 70px;
+}
+.dois {
+    width: 40%;
+}
+.tres {
+    width: 25%;
+   
+}
+.coluna img {
+    width: 95%;
+    height: 95%;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+.centro {
+    text-align: center;
+}
+h1 {
+    font-size: 35px;
+}
+h2 {
+    font-size: 25px;
+}
+/*rolagem grudenta snap  */
+    /* scroll ... vai determinar onde será travado - por exemplo no começo -stsrt*/
+    /* continuar a configuração na class interface */
+    /* position... para fixar uma tela enquanto a outra tela sobrepoem  */
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    position: sticky;
+    top: 0;
+    left: 0;
+    align-items: center;
+    justify-content: center;
+}
+    /* para colocar o rolamento na vertical digita o eixo y e digita o obrigatorio */
+    /* aplicar tambem comando na section */
+    /* tem que ter height de 100vh  para determinar o rolamento */
+.interface section {
+    height: 100vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+}
+.interface img {
+    width: 100%;
+    height: 90%;
+}
+h3, p {
+    font-size: 30px;
+}
+h4 {
+    font-size: 25px;
+    color: rgb(13, 57, 13);
+}
+h5 {
+    font-size: 20px;
+    color: rgb(13, 57, 13);
+    text-shadow: none;
+}
+h6 {
+    font-size: 15px;
+    text-shadow: 1px 1px 0 rgb(119, 158, 93);
+}
+.page {
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(234, 240, 179);
+}
+/* inico botões */
+#box {
+    width: 100%;
+    height: 30vw;
+}
+#box .caixa1 {
+    display: grid;
+    padding: 10px 10px;
+    margin: 30px 20px;
+    margin-left: 5%;
+}
+.botao {
+    margin-bottom: 30px;
+    text-decoration: none;
+    border-radius: 15px;
+    box-shadow: 6px 9px 15px rgb(38, 35, 35);
+    border: solid rgb(62, 100, 60);
+    background-color: rgb(9, 164, 50);
+    padding: 10px
+    
+}
+.botao:hover {
+    background-color: rgb(27, 98, 27, 0.3);
+}
+.botao h4:hover {
+    color: rgb(234, 240, 179);
+}
+.botao h5:hover {
+    color: rgb(234, 240, 179);
+}
+/* botões preto topo e outros objetivos */
+#bot {
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.bot {
+    padding: 5px 5px;
+}
+.bot p {
+    font-size: 20px;
+}
+.caixa {
+    border: 0;
+    line-height: 2.5;
+    padding: 5px 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: rgb(117, 255, 4);
+    text-shadow: 1px 1px 1px rgb(0, 0, 0);
+    border-radius: 10px;
+    background-color: rgb(24, 24, 11);
+    background-image: linear-gradient(to top left, rgba(46, 46, 46, 0.2), rgba(18, 22, 19, 0.2) 30%, rgba(0, 0, 0, 0));
+    box-shadow:
+      inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+      inset -2px -2px 3px rgba(36, 43, 37, 0.6);
+}
+.caixa:hover {
+    background-color: rgb(62, 255, 4);
+    color: rgb(0, 0, 0);
+}
+.caixa:active {
+    box-shadow:
+      inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+      inset 2px 2px 3px rgba(42, 43, 42, 0.6);
+}
+footer {
+    background-color: rgb(234, 240, 179, 0.5);
+    padding: 3px 2px;
+    margin: 0;
+    width: 98vw;
+    overflow: hidden;
+}
+#link {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+footer h5{
+    font-size: 16px;
+    padding: 3px 10px;
+}
+footer span h6 {
+    text-align: center;
+    background-color: rgb(112, 109, 110);
+    color: rgb(252, 245, 247);
+    font-weight: 100;
+    font-size: 16px;
+}
+@media (max-width: 900px) {
+    body {
+        height: 60%;
+    } 
+    nav {
+        visibility: hidden;
+    }
+    header nav {
+        display: none;
+        align-items: none;
+        flex-direction: none;
+        width: none;
+        margin-left: none;
+    }
+    #content {
+        height: 80vh;
+    }
+    .content {
+        width: 85%;
+        height: 70%;
+        top: 60%;
+    }
+    .bar {
+        width:46px;
+        margin: 2px;
+        font-size: 8px;
+        text-shadow: none;
+    }
+    #titulo, .coluna, .dois{
+        margin-left: 7%;
+        width: 80%;
+    }
+    .coluna {
+        margin-left: 0;
+        float: none;
+    }
+    iframe {
+        width: 100%;
+    }
+    .dois {
+        width: 100%;
+    }
+    #box {
+        height: 100%;
+    }
+    #box .caixa1 {
+        width: 50%;
+        margin-left: 20%;
+    }
+    h1{
+        font-size: 30px;
+    }
+    h2, h3, p {
+        font-size: 20px;
+    }
+    h4 {
+        font-size: 15px;
+    }
+    #bot {
+        height: 20vh;
+    }
+    .caixa {
+        margin-left: 10%;
+        padding: 5px 5px;
+    } 
+    .bot p {
+        font-size: 15px;
+    }
+    footer h5{
+        font-size: 10px;
+    }
+    footer span h6 {
+        font-size: 10px;
+    } 
+}
+/* @media all and (max-width: 500px) */
+@media (max-width: 500px) {
+    logo {
+        margin-right: 90px;
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+    .bar {
+        width:30px;
+        margin: 0.5px;
+        font-size: 5px;
+    }
+    .interface img {
+        height: 70%;
+    }
+    .bot p {
+        font-size: 10px;
+    }
+    #link {
+        display: none;
+    }
+    p{
+        font-size: 15px;
+    }
+    h1{
+        font-size: 25px;
+    }
+    h2, h3, h4 {
+        font-size: 18px;
+    }
+    h3, p {
+        text-shadow: none;
+    }
+     footer h5{
+        font-size: 8px;
+    }
+    footer span h6 {
+        font-size: 8px;
+    } 
+}
+@media (max-width: 450px) {
+    .logo img {
+    display: none;
+    }
+    .logo {
+        font-size: 30px;
+    }
+    #content {
+        height: 60vh;
+    }
+    .content {
+        height: 250px;
+        transform: translate(-50%, -80%);
+    }
+    .interface img {
+        height: 50%;
+    }
+    .botao {
+        margin-bottom: 10px;
+    }
+}
